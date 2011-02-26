@@ -1,0 +1,27 @@
+﻿@model Prudence.Web.Controllers.SearchResultViewData
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+<form method="get">
+    Search: @Html.TextBox("q")<br />
+    From: @Html.TextBox("from")<br />
+    To: @Html.TextBox("to")<br />
+    <button type="submit">Search</button>
+</form>
+
+@if (Model.Entries != null)
+{
+    foreach(var e in Model.Entries)
+    {
+         <div>
+            <b>@e.Timestamp - @e.SourceFile</b>
+            <pre>@e.Text</pre>
+         </div>
+    }
+}
