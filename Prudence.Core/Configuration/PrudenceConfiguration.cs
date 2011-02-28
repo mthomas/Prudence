@@ -23,25 +23,24 @@
 
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading;
-
-namespace Prudence.Forwarder
+namespace Prudence.Configuration
 {
-    //TODO ADD PERSISTANCE
-
-    internal class Program
+    public class PrudenceConfiguration
     {
-       
-        private static void Main(string[] args)
-        {
-            var application = new ConsoleApplicationHost();
+        public string RootPath { get; set; }
 
-            application.Run(args, new LogForwarder());
-        }
+        public ForwarderConfiguration Forwarder { get; set; }
+        public IndexerConfiguration Indexer { get; set; }
+    }
+
+    public class IndexerConfiguration
+    {
+        public string IndexPath { get; set; }
+
+        public string IncomingPath { get; set; }
+        public string ProcessingPath { get; set; }
+        public string ProcessedPath { get; set; }
+
+        public string LockFilePath { get; set; }
     }
 }

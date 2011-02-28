@@ -117,13 +117,13 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Prudence\Prudence.csproj">
-      <Project>{F82926D3-6656-47F1-ADF8-FD435B2CA0FC}</Project>
-      <Name>Prudence</Name>
-    </ProjectReference>
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Index.cshtml" />
+    <ProjectReference Include="..\Prudence.Core\Prudence.Core.csproj">
+      <Project>{63D14D84-BAC1-47B2-B41F-84F26CC229BC}</Project>
+      <Name>Prudence.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

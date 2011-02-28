@@ -3,50 +3,63 @@
     <string />
     <integer />
     <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
       <setting name="SolutionAnalysisEnabled">False</setting>
     </boolean>
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/f:LogParser.cs" caret="1147" fromTop="22" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/f:LogEntry.cs" caret="0" fromTop="0" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/f:LogSearcher.cs" caret="1147" fromTop="22" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/f:LogTextAnalyzer.cs" caret="1147" fromTop="22" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/f:Program.cs" caret="1147" fromTop="22" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/d:Properties/f:AssemblyInfo.cs" caret="1147" fromTop="22" />
-      <File id="D9C4ED1D-C672-49C3-B0B0-C6CBE1AB69CE/f:Program.cs" caret="5962" fromTop="21" />
-      <File id="D9C4ED1D-C672-49C3-B0B0-C6CBE1AB69CE/d:Properties/f:AssemblyInfo.cs" caret="2581" fromTop="22" />
-      <File id="B3F8E2AE-DE95-412B-8D41-EBA2C9498264/d:Properties/f:AssemblyInfo.cs" caret="2581" fromTop="22" />
-      <File id="B3F8E2AE-DE95-412B-8D41-EBA2C9498264/f:Program.cs" caret="0" fromTop="0" />
-      <File id="A890407D-4304-472A-B483-D5235551414F/d:Controllers/f:HomeController.cs" caret="0" fromTop="0" />
+      <File id="A890407D-4304-472A-B483-D5235551414F/d:Controllers/f:HomeController.cs" caret="1195" fromTop="21" />
+      <File id="A890407D-4304-472A-B483-D5235551414F/d:Properties/f:AssemblyInfo.cs" caret="2588" fromTop="62" />
+      <File id="A890407D-4304-472A-B483-D5235551414F/f:Global.asax.cs" caret="2318" fromTop="60" />
+      <File id="B3F8E2AE-DE95-412B-8D41-EBA2C9498264/d:Properties/f:AssemblyInfo.cs" caret="2641" fromTop="63" />
+      <File id="B3F8E2AE-DE95-412B-8D41-EBA2C9498264/f:Program.cs" caret="2289" fromTop="68" />
+      <File id="B3F8E2AE-DE95-412B-8D41-EBA2C9498264/f:App.config" caret="371" fromTop="9" />
+      <File id="D9C4ED1D-C672-49C3-B0B0-C6CBE1AB69CE/f:Program.cs" caret="0" fromTop="0" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:ApplicationComponent.cs" caret="1515" fromTop="14" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogEntry.cs" caret="1277" fromTop="5" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogParser.cs" caret="0" fromTop="0" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogSearcher.cs" caret="0" fromTop="0" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogTextAnalyzer.cs" caret="0" fromTop="0" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:ConsoleApplicationHost.cs" caret="1286" fromTop="6" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogForwarder.cs" caret="1381" fromTop="8" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:Program.cs" caret="2028" fromTop="21" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/d:Configuration/f:ForwarderConfiguration.cs" caret="500" fromTop="16" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/d:Configuration/f:ConfigurationService.cs" caret="225" fromTop="9" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/d:Configuration/f:PrudenceConfiguration.cs" caret="1772" fromTop="20" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1451" fromTop="23" />
     </RecentFiles>
     <RecentEdits>
-      <File id="D9C4ED1D-C672-49C3-B0B0-C6CBE1AB69CE/f:Program.cs" caret="0" fromTop="20" />
-      <File id="D9C4ED1D-C672-49C3-B0B0-C6CBE1AB69CE/f:Program.cs" caret="0" fromTop="0" />
-      <File id="D9C4ED1D-C672-49C3-B0B0-C6CBE1AB69CE/f:Program.cs" caret="8721" fromTop="6" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/f:LogEntry.cs" caret="15" fromTop="0" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/f:LogEntry.cs" caret="1147" fromTop="22" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/f:LogParser.cs" caret="0" fromTop="0" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/f:LogParser.cs" caret="1147" fromTop="22" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/f:LogSearcher.cs" caret="0" fromTop="0" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/f:LogSearcher.cs" caret="1147" fromTop="22" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/f:LogTextAnalyzer.cs" caret="0" fromTop="0" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/f:LogTextAnalyzer.cs" caret="1147" fromTop="22" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/f:Program.cs" caret="0" fromTop="0" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/f:Program.cs" caret="1147" fromTop="22" />
-      <File id="D9C4ED1D-C672-49C3-B0B0-C6CBE1AB69CE/f:Program.cs" caret="0" fromTop="0" />
-      <File id="D9C4ED1D-C672-49C3-B0B0-C6CBE1AB69CE/f:Program.cs" caret="5962" fromTop="21" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
-      <File id="F82926D3-6656-47F1-ADF8-FD435B2CA0FC/d:Properties/f:AssemblyInfo.cs" caret="1147" fromTop="22" />
-      <File id="D9C4ED1D-C672-49C3-B0B0-C6CBE1AB69CE/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
-      <File id="D9C4ED1D-C672-49C3-B0B0-C6CBE1AB69CE/d:Properties/f:AssemblyInfo.cs" caret="2581" fromTop="22" />
-      <File id="B3F8E2AE-DE95-412B-8D41-EBA2C9498264/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
-      <File id="B3F8E2AE-DE95-412B-8D41-EBA2C9498264/d:Properties/f:AssemblyInfo.cs" caret="2581" fromTop="22" />
-      <File id="B3F8E2AE-DE95-412B-8D41-EBA2C9498264/f:Program.cs" caret="0" fromTop="0" />
-      <File id="B3F8E2AE-DE95-412B-8D41-EBA2C9498264/f:Program.cs" caret="0" fromTop="0" />
-      <File id="B3F8E2AE-DE95-412B-8D41-EBA2C9498264/f:Program.cs" caret="2273" fromTop="21" />
-      <File id="A890407D-4304-472A-B483-D5235551414F/d:Controllers/f:HomeController.cs" caret="1857" fromTop="22" />
-      <File id="A890407D-4304-472A-B483-D5235551414F/d:Controllers/f:HomeController.cs" caret="0" fromTop="0" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="293" fromTop="9" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="3240" fromTop="24" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="3832" fromTop="44" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="3617" fromTop="30" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="4055" fromTop="38" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="4265" fromTop="34" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="4424" fromTop="42" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="4624" fromTop="27" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="4865" fromTop="32" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="5006" fromTop="39" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="5358" fromTop="34" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="5199" fromTop="31" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="5659" fromTop="28" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/d:Configuration/f:PrudenceConfiguration.cs" caret="1772" fromTop="20" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="5773" fromTop="32" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="6432" fromTop="42" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="6505" fromTop="38" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="6930" fromTop="29" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="663" fromTop="22" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1076" fromTop="19" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1076" fromTop="25" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1076" fromTop="33" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="7278" fromTop="37" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="7278" fromTop="25" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="2324" fromTop="39" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="2322" fromTop="42" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="2047" fromTop="31" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1076" fromTop="7" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1696" fromTop="29" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1697" fromTop="34" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -60,4 +73,207 @@
     </NUnitInstallDir>
     <UseAddins>Never</UseAddins>
   </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="24" />
+      <Item value="class" priority="5" />
+      <Item value="return" priority="8" />
+      <Item value="int" priority="1" />
+      <Item value="EnvironmentVariableTarget`0" priority="3" />
+      <Item value="var" priority="5" />
+      <Item value="new" priority="10" />
+      <Item value="Dictionary" priority="1" />
+      <Item value="string" priority="17" />
+      <Item value="AutoMapper" priority="0" />
+      <Item value="Mapper`0" priority="0" />
+      <Item value="IX`0" priority="0" />
+      <Item value="Console`0" priority="2" />
+      <Item value="instance" priority="0" />
+      <Item value="IDictionary" priority="0" />
+      <Item value="IList" priority="0" />
+      <Item value="ForwarderConfiguration`0" priority="0" />
+      <Item value="void" priority="7" />
+      <Item value="PrudenceConfiguration`0" priority="5" />
+      <Item value="static" priority="1" />
+      <Item value="if" priority="1" />
+      <Item value="_config" priority="3" />
+      <Item value="private" priority="9" />
+      <Item value="object" priority="4" />
+      <Item value="lock" priority="1" />
+      <Item value="_rock" priority="0" />
+      <Item value="Newtonsoft" priority="0" />
+      <Item value="Json" priority="0" />
+      <Item value="JsonConverter`0" priority="0" />
+      <Item value="FileStyleUriParser`0" priority="0" />
+      <Item value="configurationService" priority="1" />
+      <Item value="Prudence" priority="0" />
+      <Item value="Configuration" priority="2" />
+      <Item value="configuration" priority="3" />
+      <Item value="abstract" priority="0" />
+      <Item value="ApplicationComponent`0" priority="3" />
+      <Item value="_timer" priority="2" />
+      <Item value="Timer" priority="1" />
+      <Item value="null" priority="0" />
+      <Item value="protected" priority="1" />
+      <Item value="Config" priority="14" />
+      <Item value="_filePositions" priority="1" />
+      <Item value="const" priority="0" />
+      <Item value="Log" priority="6" />
+      <Item value="LogManager`0" priority="0" />
+      <Item value="GetType`0" priority="0" />
+      <Item value="LoadFilePositions`0" priority="0" />
+      <Item value="catch" priority="3" />
+      <Item value="Exception`0" priority="2" />
+      <Item value="path" priority="3" />
+      <Item value="try" priority="3" />
+      <Item value="File`0" priority="1" />
+      <Item value="System" priority="2" />
+      <Item value="IOException`0" priority="2" />
+      <Item value="bool" priority="2" />
+      <Item value="false" priority="2" />
+      <Item value="foreach" priority="1" />
+      <Item value="this" priority="0" />
+      <Item value="PositionFileExtension" priority="0" />
+      <Item value="start" priority="0" />
+      <Item value="stream" priority="1" />
+      <Item value="Guid`0" priority="0" />
+      <Item value="Environment`0" priority="0" />
+      <Item value="Thread`0" priority="2" />
+      <Item value="_background" priority="3" />
+      <Item value="Thread" priority="1" />
+      <Item value="while" priority="1" />
+      <Item value="Monitor`0" priority="0" />
+      <Item value="_stopped" priority="1" />
+      <Item value="true" priority="4" />
+      <Item value="_component" priority="3" />
+      <Item value="component" priority="0" />
+      <Item value="ConfigurationService`0" priority="0" />
+      <Item value="configService" priority="1" />
+      <Item value="e" priority="0" />
+      <Item value="application" priority="0" />
+      <Item value="args" priority="0" />
+      <Item value="LogForwarder`0" priority="0" />
+      <Item value="ThreadStaticAttribute`0" priority="0" />
+      <Item value="_done" priority="1" />
+      <Item value="Path`0" priority="0" />
+      <Item value="char" priority="2" />
+      <Item value="fileName" priority="1" />
+      <Item value="HashSet&lt;char&gt;" priority="0" />
+      <Item value="_invalidFileNameChars" priority="0" />
+      <Item value="s" priority="0" />
+      <Item value="c" priority="0" />
+      <Item value="Stream`0" priority="0" />
+      <Item value="file" priority="0" />
+      <Item value="FileStream`0" priority="0" />
+      <Item value="thr" priority="0" />
+      <Item value="IndexerConfiguration`0" priority="0" />
+      <Item value="Base64FormattingOptions`0" priority="0" />
+      <Item value="IO" priority="0" />
+      <Item value="Directory`0" priority="1" />
+      <Item value="using" priority="0" />
+      <Item value="Lucene" priority="0" />
+      <Item value="Net" priority="0" />
+      <Item value="Search" priority="0" />
+      <Item value="Store" priority="0" />
+      <Item value="stopped" priority="0" />
+      <Item value="_waitingForFilesInProcessingDirectory" priority="3" />
+      <Item value="WaitForFilesInProcessingDirectory`0" priority="0" />
+      <Item value="Stop`0" priority="0" />
+      <Item value="finally" priority="1" />
+      <Item value="ex" priority="0" />
+      <Item value="ReleaseLock`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AutoMapper.Mapper">
+      <Item value="DynamicMap`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="WriteLine`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Prudence.Program+IX">
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Newtonsoft.Json.JsonConvert">
+      <Item value="DeserializeObject`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.File">
+      <Item value="ReadAllText`0" priority="0" />
+      <Item value="Decrypt`0" priority="0" />
+      <Item value="Delete`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Prudence.Configuration.ConfigurationService">
+      <Item value="Init`0" priority="1" />
+      <Item value="GetConfiguration`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Prudence.Configuration.PrudenceConfiguration">
+      <Item value="Forwarder" priority="4" />
+      <Item value="Indexer" priority="9" />
+      <Item value="RootPath" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Prudence.Configuration.ForwarderConfiguration">
+      <Item value="PollPeriodMiliseconds" priority="0" />
+      <Item value="ForwardLogPath" priority="1" />
+      <Item value="PathsToWatch" priority="0" />
+      <Item value="TargetPath" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Timer">
+      <Item value="Dispose`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@log4net.LogManager">
+      <Item value="GetLogger`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:log4net.ILog">
+      <Item value="Warn`0" priority="1" />
+      <Item value="Info`0" priority="1" />
+      <Item value="InfoFormat`0" priority="0" />
+      <Item value="Error`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileStream">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Guid">
+      <Item value="NewGuid`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="MachineName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="Sleep`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="Join`0" priority="1" />
+      <Item value="Start`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Prudence.ApplicationComponent">
+      <Item value="Init`0" priority="0" />
+      <Item value="Start`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.ConsoleCancelEventArgs">
+      <Item value="Cancel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Prudence.ConsoleApplicationHost">
+      <Item value="Run`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Path">
+      <Item value="GetInvalidFileNameChars`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Where`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.HashSet`1">
+      <Item value="Contains`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Aggregate`3" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Prudence.Configuration.IndexerConfiguration">
+      <Item value="IndexPath" priority="1" />
+      <Item value="IncomingPath" priority="1" />
+      <Item value="ProcessingPath" priority="1" />
+      <Item value="ProcessedPath" priority="1" />
+      <Item value="LockFilePath" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Tasks.UnobservedTaskExceptionEventArgs">
+      <Item value="Exception" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
 </Configuration>

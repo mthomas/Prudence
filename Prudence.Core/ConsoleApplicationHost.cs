@@ -24,24 +24,50 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Security.Cryptography;
-using System.Text;
+
 using System.Threading;
+using Prudence.Configuration;
 
-namespace Prudence.Forwarder
+
+namespace Prudence
 {
-    //TODO ADD PERSISTANCE
-
-    internal class Program
+    public class ConsoleApplicationHost
     {
-       
-        private static void Main(string[] args)
-        {
-            var application = new ConsoleApplicationHost();
+        private ApplicationComponent _component;
 
-            application.Run(args, new LogForwarder());
+        public void Run(string[] args, ApplicationComponent component)
+        {
+            var configService = new ConfigurationService();
+
+            configService.Init(@"C:\PrudenceInstallation\prudence.json"); //TODO
+
+            Console.CancelKeyPress += ConsoleCancelKeyPress;
+
+            _component = component;
+
+            _component.Init(configService.GetConfiguration());
+
+            _component.Start();
+
+            while (!_done)
+            {
+                Thread.Sleep(100);
+            }
+
+            Console.WriteLine("Exiting");
+        }
+
+        private bool _done = false;
+
+        private void ConsoleCancelKeyPress(object sender, ConsoleCancelEventArgs e)
+        {
+            Console.WriteLine("Shutting down");
+
+            e.Cancel = true;
+
+            _component.Stop();
+
+            _done = true;
         }
     }
 }

@@ -24,24 +24,33 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading;
+using log4net;
+using Prudence.Configuration;
 
-namespace Prudence.Forwarder
+namespace Prudence
 {
-    //TODO ADD PERSISTANCE
-
-    internal class Program
+    public abstract class ApplicationComponent
     {
-       
-        private static void Main(string[] args)
-        {
-            var application = new ConsoleApplicationHost();
+        protected PrudenceConfiguration Config;
+        protected ILog Log;
 
-            application.Run(args, new LogForwarder());
+        public virtual void Init(PrudenceConfiguration configuration)
+        {
+            if (configuration == null) throw new ArgumentNullException("configuration");
+
+            Config = configuration;
+
+            Log = LogManager.GetLogger(GetType());
         }
+
+        /// <summary>
+        ///   Should asynchronously start this application component and return.
+        /// </summary>
+        public abstract void Start();
+
+        /// <summary>
+        ///   Should stop the application.  Must not return until the application has stopped.
+        /// </summary>
+        public abstract void Stop();
     }
 }

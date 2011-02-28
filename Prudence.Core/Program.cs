@@ -39,7 +39,7 @@ namespace Prudence
 {
     internal class Program
     {
-        private static string RootDir = @"c:\Prudence\data\";
+        private static string RootDir = @"C:\PrudenceInstallation\data\";
         private static readonly string IncomingDir = RootDir + @"Incoming\";
         private static readonly string ProcessingDir = RootDir + @"Processing\";
         private static readonly string ProcessedDir = RootDir + @"Processed\";
@@ -59,40 +59,7 @@ namespace Prudence
 
             Console.CancelKeyPress += Console_CancelKeyPress;
 
-            TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
-
-            AcquireLock();
-            try
-            {
-                EnsureDirectoriesExist();
-
-                OpenIndexWriter();
-
-                WaitForFilesInProcessingDirectory();
-
-                Console.WriteLine("Waiting for pending tasks to complete...");
-
-                lock (outstandingTasks)
-                {
-                    foreach (var task in outstandingTasks)
-                    {
-                        task.Wait();
-                    }
-                }
-
-                Console.WriteLine("Closing index writer...");
-
-                indexWriter.Close();
-            }
-            finally
-            {
-                Console.WriteLine("Releasing lock...");
-                ReleaseLock();
-
-                sw.Stop();
-
-                Console.WriteLine("Complete in {0}ms", sw.ElapsedMilliseconds);
-            }
+           
         }
 
         private static void TaskScheduler_UnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)
