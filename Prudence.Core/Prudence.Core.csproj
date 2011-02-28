@@ -63,7 +63,6 @@
     <Compile Include="LogParser.cs" />
     <Compile Include="LogSearcher.cs" />
     <Compile Include="LogTextAnalyzer.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

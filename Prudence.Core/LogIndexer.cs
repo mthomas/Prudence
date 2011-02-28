@@ -1,25 +1,48 @@
-﻿using System;
+﻿#region license
+
+// Copyright (c) 2011 Michael Thomas
+// 
+// Permission is hereby granted, free of charge, to any person obtaining
+// a copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to
+// permit persons to whom the Software is furnished to do so, subject to
+// the following conditions:
+// 
+// The above copyright notice and this permission notice shall be
+// included in all copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+// LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+// OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+#endregion
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Lucene.Net.Analysis;
 using Lucene.Net.Index;
 using Lucene.Net.Store;
-using LuceneDirectory = Lucene.Net.Store.Directory;
 using Directory = System.IO.Directory;
-using Prudence.Configuration;
+using LuceneDirectory = Lucene.Net.Store.Directory;
 
 namespace Prudence
 {
     public class LogIndexer : ApplicationComponent
     {
+        private readonly List<Task> _outstandingTasks = new List<Task>();
         private IndexWriter _indexWriter;
 
         private bool _stopped;
-        private readonly List<Task> _outstandingTasks = new List<Task>();
         private Thread _waitingForFilesInProcessingDirectory;
 
         public override void Start()
@@ -78,12 +101,12 @@ namespace Prudence
             {
                 Stop();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                  Log.Error("Failed to stop cleanly.", ex);  
+                Log.Error("Failed to stop cleanly.", ex);
             }
-            
-            throw new Exception("Internal error", e.Exception);    
+
+            throw new Exception("Internal error", e.Exception);
         }
 
         private void OpenIndexWriter()
@@ -105,7 +128,11 @@ namespace Prudence
                 throw new Exception("Cannot access root directory " + Config.RootPath);
             }
 
-            var dirs = new[] { Config.Indexer.IncomingPath, Config.Indexer.ProcessingPath, Config.Indexer.ProcessedPath, Config.Indexer.IndexPath };
+            var dirs = new[]
+                           {
+                               Config.Indexer.IncomingPath, Config.Indexer.ProcessingPath, Config.Indexer.ProcessedPath,
+                               Config.Indexer.IndexPath
+                           };
 
             foreach (var dir in dirs)
             {
@@ -252,7 +279,5 @@ namespace Prudence
                 }
             }
         }
-
-       
     }
 }

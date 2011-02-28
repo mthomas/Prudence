@@ -16,50 +16,50 @@
       <File id="B3F8E2AE-DE95-412B-8D41-EBA2C9498264/f:Program.cs" caret="2289" fromTop="68" />
       <File id="B3F8E2AE-DE95-412B-8D41-EBA2C9498264/f:App.config" caret="371" fromTop="9" />
       <File id="D9C4ED1D-C672-49C3-B0B0-C6CBE1AB69CE/f:Program.cs" caret="0" fromTop="0" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:ApplicationComponent.cs" caret="1515" fromTop="14" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:ApplicationComponent.cs" caret="2076" fromTop="14" />
       <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogEntry.cs" caret="1277" fromTop="5" />
       <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogParser.cs" caret="0" fromTop="0" />
       <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogSearcher.cs" caret="0" fromTop="0" />
       <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogTextAnalyzer.cs" caret="0" fromTop="0" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:ConsoleApplicationHost.cs" caret="1286" fromTop="6" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogForwarder.cs" caret="1381" fromTop="8" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:Program.cs" caret="2028" fromTop="21" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/d:Configuration/f:ForwarderConfiguration.cs" caret="500" fromTop="16" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/d:Configuration/f:ConfigurationService.cs" caret="225" fromTop="9" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:ConsoleApplicationHost.cs" caret="2285" fromTop="6" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogForwarder.cs" caret="7625" fromTop="8" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:Program.cs" caret="7879" fromTop="21" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/d:Configuration/f:ForwarderConfiguration.cs" caret="1807" fromTop="16" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/d:Configuration/f:ConfigurationService.cs" caret="1799" fromTop="9" />
       <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/d:Configuration/f:PrudenceConfiguration.cs" caret="1772" fromTop="20" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1451" fromTop="23" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1135" fromTop="21" />
     </RecentFiles>
     <RecentEdits>
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="293" fromTop="9" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="3240" fromTop="24" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="3832" fromTop="44" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="3617" fromTop="30" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="4055" fromTop="38" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="4265" fromTop="34" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="4424" fromTop="42" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="4624" fromTop="27" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="4865" fromTop="32" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="5006" fromTop="39" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="5358" fromTop="34" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="5199" fromTop="31" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="5659" fromTop="28" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="44" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="30" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="38" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="34" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="42" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="27" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="32" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="39" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="34" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="31" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="28" />
       <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/d:Configuration/f:PrudenceConfiguration.cs" caret="1772" fromTop="20" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="5773" fromTop="32" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="6432" fromTop="42" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="6505" fromTop="38" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="6930" fromTop="29" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="663" fromTop="22" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1076" fromTop="19" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1076" fromTop="25" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1076" fromTop="33" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="7278" fromTop="37" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="7278" fromTop="25" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="2324" fromTop="39" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="2322" fromTop="42" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="2047" fromTop="31" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1076" fromTop="7" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1696" fromTop="29" />
-      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1697" fromTop="34" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="32" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="42" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="38" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="29" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="22" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="19" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="25" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="33" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="37" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="25" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="39" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="42" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="31" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="7" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="29" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="8480" fromTop="34" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="0" fromTop="0" />
+      <File id="63D14D84-BAC1-47B2-B41F-84F26CC229BC/f:LogIndexer.cs" caret="1135" fromTop="21" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
