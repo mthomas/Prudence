@@ -28,19 +28,9 @@ namespace Prudence.Configuration
     public class PrudenceConfiguration
     {
         public string RootPath { get; set; }
+        public string IndexPath { get; set; }
 
         public ForwarderConfiguration Forwarder { get; set; }
         public IndexerConfiguration Indexer { get; set; }
-    }
-
-    public class IndexerConfiguration
-    {
-        public string IndexPath { get; set; }
-
-        public string IncomingPath { get; set; }
-        public string ProcessingPath { get; set; }
-        public string ProcessedPath { get; set; }
-
-        public string LockFilePath { get; set; }
     }
 }

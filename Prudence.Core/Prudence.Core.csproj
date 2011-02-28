@@ -55,6 +55,7 @@
     <Compile Include="ApplicationComponent.cs" />
     <Compile Include="Configuration\ConfigurationService.cs" />
     <Compile Include="Configuration\ForwarderConfiguration.cs" />
+    <Compile Include="Configuration\IndexerConfiguration.cs" />
     <Compile Include="Configuration\PrudenceConfiguration.cs" />
     <Compile Include="ConsoleApplicationHost.cs" />
     <Compile Include="LogEntry.cs" />

@@ -111,7 +111,7 @@ namespace Prudence
 
         private void OpenIndexWriter()
         {
-            var dir = FSDirectory.Open(new DirectoryInfo(Config.Indexer.IndexPath));
+            var dir = FSDirectory.Open(new DirectoryInfo(Config.IndexPath));
 
             //create an analyzer to process the text
             var analyzer = new SimpleAnalyzer();
@@ -131,7 +131,7 @@ namespace Prudence
             var dirs = new[]
                            {
                                Config.Indexer.IncomingPath, Config.Indexer.ProcessingPath, Config.Indexer.ProcessedPath,
-                               Config.Indexer.IndexPath
+                               Config.IndexPath
                            };
 
             foreach (var dir in dirs)
