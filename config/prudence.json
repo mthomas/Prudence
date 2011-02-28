@@ -1,0 +1,23 @@
+{
+	"RootPath" : "C:\\PrudenceInstallation\\"
+	, "IndexPath" : "C:\\PrudenceInstallation\\data\\Index\\"
+	
+	, "Forwarder" : 
+	{
+		"ForwardLogPath" : "C:\\PrudenceInstallation\\data\\ForwardLog\\"
+		, "TargetPath" : "C:\\PrudenceInstallation\\data\\Incoming\\"
+		, "PathsToWatch" :
+		[
+			"C:\\PrudenceInstallation\\test\\"
+		]
+		, "PollPeriodMiliseconds" : 100
+	}
+	
+	, "Indexer" :
+	{
+		"IncomingPath" : "C:\\PrudenceInstallation\\data\\Incoming\\"
+		, "ProcessingPath" : "C:\\PrudenceInstallation\\data\\Processing\\"
+		, "ProcessedPath" : "C:\\PrudenceInstallation\\data\\Processed\\"
+		, "LockFilePath" : "C:\\PrudenceInstallation\\data\\indexer.lock"
+	}
+}

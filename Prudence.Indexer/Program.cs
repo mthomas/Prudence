@@ -23,12 +23,19 @@
 
 #endregion
 
+using log4net.Config;
+
 namespace Prudence.Indexer
 {
     internal class Program
     {
         private static void Main(string[] args)
         {
+            XmlConfigurator.Configure();
+
+            var application = new ConsoleApplicationHost();
+
+            application.Run(args, new LogIndexer());
         }
     }
 }

@@ -23,6 +23,9 @@
 
 #endregion
 
+using log4net;
+using log4net.Config;
+
 namespace Prudence.Forwarder
 {
     //TODO ADD PERSISTANCE
@@ -31,6 +34,8 @@ namespace Prudence.Forwarder
     {
         private static void Main(string[] args)
         {
+            XmlConfigurator.Configure();
+
             var application = new ConsoleApplicationHost();
 
             application.Run(args, new LogForwarder());
