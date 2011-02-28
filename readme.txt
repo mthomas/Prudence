@@ -12,3 +12,14 @@ Technologies
 
 * Lucene.NET for full text search
 * Windows File Shares for data transfer
+
+Internal Logging Practices
+
+(inspired by http://commons.apache.org/logging/commons-logging-1.0.3/usersguide.html)
+
+* DEBUG: Detailed information of execution flow. Nearly constant stream of events.
+* INFO: Interesting runtime events (startup/shutdown). Be generally conservative with INFO logging.
+* WARN: "Almost" errors and runtime situations that are undesirable or unexpected but immediately recoverable.
+* ERROR: Runtime errors that can be recovered from.  Indicates potential bugs or serious issue with runtime.
+* FATAL: Severe errors that cause premature termination.
+

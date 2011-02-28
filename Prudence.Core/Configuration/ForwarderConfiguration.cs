@@ -42,5 +42,6 @@ namespace Prudence.Configuration
         public string[] PathsToWatch { get; set; }
 
         public int PollPeriodMiliseconds { get; set; }
+        public int ChunkSizeInLines { get; set; }
     }
 }

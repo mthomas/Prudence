@@ -26,17 +26,23 @@
 using System;
 using System.Threading;
 using Prudence.Configuration;
+using log4net;
 
 namespace Prudence
 {
     public class ConsoleApplicationHost
     {
-        private ApplicationComponent _component;
+        private const int PollingIntervalMiliseconds = 100;
 
+        private readonly ILog _log = LogManager.GetLogger("ConsoleApplicationHost");
+
+        private ApplicationComponent _component;
         private bool _done;
 
         public void Run(string[] args, ApplicationComponent component)
         {
+            AppDomain.CurrentDomain.UnhandledException += LogUnhandledException;
+
             var configService = new ConfigurationService();
 
             configService.Init(@"C:\PrudenceInstallation\prudence.json"); //TODO
@@ -51,15 +57,20 @@ namespace Prudence
 
             while (!_done)
             {
-                Thread.Sleep(100);
+                Thread.Sleep(PollingIntervalMiliseconds);
             }
 
-            Console.WriteLine("Exiting");
+            _log.InfoFormat("Exiting");
+        }
+
+        private void LogUnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            _log.Fatal("Unhandled exception in console application host", e.ExceptionObject as Exception);
         }
 
         private void ConsoleCancelKeyPress(object sender, ConsoleCancelEventArgs e)
         {
-            Console.WriteLine("Shutting down");
+            _log.Info("Recieved Ctrl+C triggering stop on application component");
 
             e.Cancel = true;
 

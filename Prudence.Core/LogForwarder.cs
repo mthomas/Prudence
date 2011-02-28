@@ -26,7 +26,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
@@ -36,29 +35,70 @@ namespace Prudence
     public class LogForwarder : ApplicationComponent
     {
         private const string PositionFileExtension = ".dat";
+
         private readonly SHA256 _hasher = SHA256.Create();
-        private readonly HashSet<char> _invalidFileNameChars = new HashSet<char>(Path.GetInvalidFileNameChars());
+        
         private readonly List<string> _lineBuffer = new List<string>();
 
         private Thread _background;
         private Dictionary<string, long> _filePositions;
         private bool _stopped;
 
+        private string _currentFile;
+        private long _currentByteStart;
+        private long _currentByteEnd;
+
         public override void Start()
         {
             LoadFilePositions();
 
-            _background = new Thread(() =>
-                                         {
-                                             while (!_stopped)
-                                             {
-                                                 MonitorFiles(null);
-
-                                                 Thread.Sleep(Config.Forwarder.PollPeriodMiliseconds);
-                                             }
-                                         });
+            _background = new Thread(MonitorFiles);
 
             _background.Start();
+        }
+
+        public override void Stop()
+        {
+            _stopped = true;
+
+            Log.Info("Stopping execution.  Waiting for background process to complete.");
+
+            _background.Join();
+        }
+
+        public void MonitorFiles()
+        {
+            while (!_stopped)
+            {
+                Log.Debug("Checking for changed log files.");
+
+                foreach (var path in Config.Forwarder.PathsToWatch)
+                {
+                    Log.DebugFormat("Checking for changed log files in {0}", path);
+
+                    var files = GetMonitoredFiles(path);
+
+                    foreach (var file in files)
+                    {
+                        ProcessLogFile(file);
+                    }
+                }
+
+                Thread.Sleep(Config.Forwarder.PollPeriodMiliseconds);
+            }
+        }
+
+        public IEnumerable<string> GetMonitoredFiles(string path)
+        {
+            try
+            {
+                return Directory.EnumerateFiles(path);
+            }
+            catch(IOException ex)
+            {
+                Log.Error("Unable to enumerate log files in " + path, ex);
+                return new string[] {};
+            }
         }
 
         private void LoadFilePositions()
@@ -66,6 +106,8 @@ namespace Prudence
             _filePositions = new Dictionary<string, long>();
 
             var paths = Directory.GetFiles(Config.Forwarder.ForwardLogPath, "*" + PositionFileExtension);
+
+            Log.InfoFormat("Loading {0} persisted log file positions.", paths.Length);
 
             foreach (var path in paths)
             {
@@ -85,8 +127,17 @@ namespace Prudence
         private void LoadFilePosition(string path)
         {
             var position = long.Parse(File.ReadAllText(path));
+            var fileHash = Path.GetFileNameWithoutExtension(path);
 
-            _filePositions[Path.GetFileNameWithoutExtension(path)] = position;
+            if (fileHash == null)
+            {
+                Log.WarnFormat("Unable to parse file hash from file name {0}", path);
+            }
+            else
+            {
+                Log.DebugFormat("Setting log file position for {0} to {1}", fileHash, position);
+                _filePositions[fileHash] = position;
+            }
         }
 
         private void TryDelete(string path)
@@ -101,147 +152,110 @@ namespace Prudence
             }
         }
 
-        public override void Stop()
-        {
-            _stopped = true;
-
-            _background.Join();
-        }
-
-        public void MonitorFiles(object state)
-        {
-            foreach (var path in Config.Forwarder.PathsToWatch)
-            {
-                var files = Directory.GetFiles(path);
-
-                foreach (var file in files)
-                {
-                    ProcessLogFile(file);
-                }
-            }
-
-            SaveFilePositions();
-        }
-
         private void ProcessLogFile(string logFilePath)
         {
+            _currentFile = logFilePath;
+
+            Log.DebugFormat("Processing log file {0}", logFilePath);
+
             FileStream stream;
 
             try
             {
+                //this combination seems to allow us to read log files
+                //as they are being written to.  don't know if that causes
+                //potential issues.  is there a way to snapshot the file 
+                //while we do this?
                 stream = File.Open(logFilePath, FileMode.Open, FileAccess.Read,
                                    FileShare.Read | FileShare.Write | FileShare.Delete);
             }
             catch (IOException ex)
             {
-                Log.Info("Unable to open file " + logFilePath, ex);
+                Log.Info("Unable to open log file " + logFilePath, ex); //only info level since sometimes rolling log files get moved out from under us
                 return;
             }
 
             using (stream)
             {
-                var firstLine = GetFirstLine(stream);
+                var firstLine = stream.ReadFirstLine();
 
-
-                var lineHash = Hash(firstLine);
+                var lineHash = GetLogFileHash(firstLine);
 
                 long start = 0;
+                long end = stream.Length;
 
                 if (_filePositions.ContainsKey(lineHash))
                 {
                     start = _filePositions[lineHash];
                 }
 
-                if (start < stream.Length)
+                if (start < end)
                 {
-                    var end = ProcessLogFileFrom(stream, start);
+                    ProcessLogFileFrom(stream, start, end);
 
                     _filePositions[lineHash] = end;
 
-                    FlushLineBuffer();
+                    SaveFilePosition(lineHash, end);
                 }
             }
         }
 
-        private long ProcessLogFileFrom(FileStream stream, long start)
+        private void ProcessLogFileFrom(FileStream stream, long start, long end)
         {
-            Log.InfoFormat("Processing bytes {0} to {1} of {2}", start, stream.Length, "UNKNOWN");
+            _currentByteStart = start;
+            _currentByteEnd = end;
+
+            Log.DebugFormat("Processing bytes {0} to {1} of {2}", _currentByteStart, _currentByteEnd, _currentFile);
 
             stream.Seek(start, SeekOrigin.Begin);
 
             var reader = new StreamReader(stream);
 
-            string line;
-
-            while ((line = reader.ReadLine()) != null)
+            using (var buffer = new LineBuffer(Config.Forwarder.TargetPath, GetBaseFileName(), ".log", Config.Forwarder.ChunkSizeInLines))
             {
-                ProcessLogFileLine(line);
-            }
-
-
-            return stream.Length;
-        }
-
-        private void ProcessLogFileLine(string line)
-        {
-            _lineBuffer.Add(line);
-
-            if (_lineBuffer.Count > 1000)
-            {
-                FlushLineBuffer();
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    buffer.AppendLine(line);
+                }
             }
         }
 
-        private void FlushLineBuffer()
+        private string GetBaseFileName()
         {
-            File.WriteAllLines(
-                Path.Combine(Config.Forwarder.TargetPath,
-                             MakeFileNameSafe(GetMachineName() + "|" + GetFileName() + "|" + GetByteRange() + "|" +
-                                              Guid.NewGuid()) +
-                             ".log"), _lineBuffer);
-
-            _lineBuffer.Clear();
-        }
-
-        private string MakeFileNameSafe(string fileName)
-        {
-            return fileName.Where(c => !_invalidFileNameChars.Contains(c)).Aggregate("", (s, c) => s += c);
+            return (GetMachineName() + "_" + GetFileName() + "_" + GetByteRange()).ToSafeFilename();
         }
 
         private string GetByteRange()
         {
-            return "unknown-unknown";
+            return String.Format("{0}-{1}", _currentByteStart, _currentByteEnd);
         }
 
         private string GetFileName()
         {
-            return "UNKNOWN";
+            return _currentFile.Replace('_', '-');
         }
 
         private string GetMachineName()
         {
-            return Environment.MachineName;
+            return Environment.MachineName.Replace('_', '-');
         }
 
-        private string Hash(string firstLine)
+        /// <summary>
+        /// We hash the first line of a log file to create a unique identifer for this log file.
+        /// This allows us to track a specific file across renames.  
+        /// </summary>
+        /// <param name="firstLine"></param>
+        /// <returns></returns>
+        private string GetLogFileHash(string firstLine)
         {
             return BitConverter.ToString(_hasher.ComputeHash(Encoding.Default.GetBytes(firstLine)));
         }
 
-        private string GetFirstLine(FileStream stream)
+        private void SaveFilePosition(string logFileHash, long position)
         {
-            var reader = new StreamReader(stream);
-
-            return reader.ReadLine();
-        }
-
-        private void SaveFilePositions()
-        {
-            foreach (var pair in _filePositions)
-            {
-                File.WriteAllText(Path.Combine(Config.Forwarder.ForwardLogPath, pair.Key + PositionFileExtension),
-                                  pair.Value.ToString());
-            }
+                File.WriteAllText(Path.Combine(Config.Forwarder.ForwardLogPath, logFileHash + PositionFileExtension),
+                                  position.ToString());
         }
     }
 }

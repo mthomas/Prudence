@@ -58,12 +58,15 @@
     <Compile Include="Configuration\IndexerConfiguration.cs" />
     <Compile Include="Configuration\PrudenceConfiguration.cs" />
     <Compile Include="ConsoleApplicationHost.cs" />
+    <Compile Include="ExtensionsForStream.cs" />
+    <Compile Include="LineBuffer.cs" />
     <Compile Include="LogEntry.cs" />
     <Compile Include="LogForwarder.cs" />
     <Compile Include="LogIndexer.cs" />
     <Compile Include="LogParser.cs" />
     <Compile Include="LogSearcher.cs" />
     <Compile Include="LogTextAnalyzer.cs" />
+    <Compile Include="ExtensionsForString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
